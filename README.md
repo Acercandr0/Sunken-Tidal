@@ -35,7 +35,7 @@ Modify desktop client with Luna, follow these steps:
 3.  **Install Required Plugins:** Go to the **Plugin Store** tab and install:
     * **Themer**: Required to apply the CSS code.
     * **Tidal Tags**: Required to display playback quality and metadata.
-4.  **Apply Theme:** Press `Ctrl + E` to open the theme input box and paste the [**Lunallena.css**](https://github.com/Acercandr0/Sunken-Tidal/blob/main/Luna.css) code.
+4.  **Apply Theme:** Press `Ctrl + E` to open the theme input box and paste the [**Luna.css**](https://github.com/Acercandr0/Sunken-Tidal/blob/main/Luna.css) code.
 
 ---
 

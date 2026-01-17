@@ -2,11 +2,11 @@
 
 A simple CSS theme for Tidal.
 
-![Preview](preview/1.png)
-![Preview](preview/2.png)
-![Preview](preview/3.png)
-![Preview](preview/4.png)
-![Preview](preview/5.png)
+![Preview](Preview/1.png)
+![Preview](Preview/2.png)
+![Preview](Preview/3.png)
+![Preview](Preview/4.png)
+![Preview](Preview/5.png)
 
 ---
 

@@ -456,3 +456,23 @@ div[data-test="query-suggestions"] {
 div[data-test="query-suggestions"] div[class*="_icon_"] {
     background: transparent;
 }
+
+/* =========================================================
+   LUNA SETTINGS
+   ========================================================= */
+
+   [class*="_bar_"] {
+    background: var(--market-core-fill-black-color) !important;
+    border-bottom: var(--border);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+div[class^="_bar_"] > div[class^="_title_"] * {
+    color: white !important;
+}
+
+    [class="format-info"] {
+    font-size: 11px !important;
+    max-width: 50px;
+    border-radius: 7px;
+}

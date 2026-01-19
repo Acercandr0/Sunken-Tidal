@@ -1,13 +1,16 @@
 /* ==UserStyle==
 @name         Sunken Tidal
-@version      1.11
+@version      1.2
 @namespace    https://github.com/Acercandr0
 @description  A theme for Tidal.
-@updateURL    https://raw.githubusercontent.com/Acercandr0/Sunken-Tidal/main/Stylus.css
 @author       Acercandr0
 @license      No License
+@updateURL    https://raw.githubusercontent.com/Acercandr0/Sunken-Tidal/main/Sunken.css
+@installURL   https://raw.githubusercontent.com/Acercandr0/Sunken-Tidal/main/Sunken.css
 ==/UserStyle== */
 
+@-moz-document url-prefix("https://tidal.com/"), url-prefix("https://listen.tidal.com/") {
+    
 /* =========================================================
    BORDERS & COLORS
    ========================================================= */
@@ -460,4 +463,6 @@ div[data-test="query-suggestions"] {
 
 div[data-test="query-suggestions"] div[class*="_icon_"] {
     background: transparent;
+}
+
 }

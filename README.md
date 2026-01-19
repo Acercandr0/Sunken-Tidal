@@ -19,7 +19,9 @@ The best way to experience **Sunken Tidal** on the desktop client.
 3.  **Apply Theme:** * Go to the **Themes** tab in Luna Settings.
     * Click on **Add Theme**.
     * Paste the following **Raw URL**:
-      `https://raw.githubusercontent.com/Acercandr0/Sunken-Tidal/main/Sunken.css`
+   ```text
+      https://raw.githubusercontent.com/Acercandr0/Sunken-Tidal/main/Sunken.css
+   ```
 4.  **Auto-Updates:** This method keeps your theme updated! Tidaluna will automatically fetch changes from the repository.
 
 ---

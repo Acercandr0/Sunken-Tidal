@@ -456,3 +456,28 @@ div[data-test="query-suggestions"] {
 div[data-test="query-suggestions"] div[class*="_icon_"] {
     background: transparent;
 }
+
+/* =========================================================
+   WINDOW & TITLE BAR
+   ========================================================= */
+
+[class*="_bar_"] {
+    background: var(--market-core-fill-black-color) !important;
+    border-bottom: var(--border);
+}
+
+div[class^="_bar_"] > div[class^="_title_"] * {
+    color: white !important;
+}
+
+div[class*="_bar_"] button[class*="_button_"] {
+    background: transparent;
+}
+
+div[class*="_bar_"] button[class*="_button_"] svg {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+div[class*="_bar_"] button[class*="_button_"]:hover svg {
+    color: rgba(255, 255, 255, 1);
+}

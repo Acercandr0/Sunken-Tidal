@@ -1,6 +1,6 @@
 /* =========================================================
-   Sunken v1.2
-   by Acercandr0
+   Sunken v1.3
+   by Acercandr0 / RavenStryker
    ========================================================= */
 
 /* =========================================================
@@ -8,11 +8,12 @@
    ========================================================= */
 :root {
     --accent: rgb(56, 255, 172);
-    --border: solid 1px rgba(255,255,255,0.1);
+    --border: solid 1px rgb(255 255 255 / 10%);
 }
 
 * {
     --market-core-fill-black-color: rgb(30, 30, 30) !important;
+    --market-core-fill-dark-color: rgb(10, 10, 10) !important;
     --market-button-border-radius: 7px;
 }
 
@@ -51,11 +52,6 @@ h2 {
 
 #spotlighted-badge * {
     fill: var(--accent) !important;
-}
-
-[class*="marketPill"] {
-    border-radius: var(--market-core-radius-100);
-    border: var(--border);
 }
 
 /* =========================================================
@@ -119,12 +115,13 @@ h2 {
     background-color: var(--market-core-fill-black-color);
     border: var(--border);
     transition:
-        background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 [class*="_shortcutItem_"]:hover {
-    background-color: rgba(255, 255, 2555, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
 }
+*/
 
 [class*="_container_"][class*="_overlay_"]::before {
     display: none;
@@ -133,7 +130,8 @@ h2 {
 /* =========================================================
    HEADER
    ========================================================= */
-#mainHeader {
+
+[class*="_sidebarWrapper_"] [class*="_header_"] {
     border-bottom: var(--border);
 }
 
@@ -150,17 +148,42 @@ h2 {
    ========================================================= */
 
 [data-test="footer-player"] {
-    background-color: var(--market-core-fill-black-color) !important;
+    background-color: var(--market-core-fill-dark-color) !important;
     box-shadow: 0 -10px 60px rgba(0,0,0,0.3) !important;
-    padding-bottom: 2px;
+    border-radius: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    border: none !important;
+    border-top: var(--border) !important;
 }
 
-[class*="progress"] {
+[data-test="footer-player"].nowPlayingVisible {
+    background: var(--market-core-fill-black-color) !important;
+}
+
+[class*="_centerSection_"] {
+    gap: 0px !important;
+}
+
+[data-test="footer-player"]::before {
+    display: none !important;
+}
+
+[class*="_scrubberBar_"] {
     position: absolute;
     width: 100vw;
-    margin-top: -162px;
-    background-color: #1d1d1d;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    height: 7px;
+    box-shadow: 0 1px 2px #0000004a, 0 3px 4px #0000004a !important;
+}
+
+[class*="_scrubberRow_"] {
+    position: static;
+    width: 90px;
+    order: -1;
 }
 
 [class*="_fillingBlock_"][class*="_range_"] {
@@ -168,41 +191,36 @@ h2 {
 }
 
 [data-test="progress-indicator"] {
-        background-color: var(--accent);
+    background-color: var(--accent);
 }
 [class*='_knob_'] {
-    margin-left: -6px;
-    border-radius: 50%;
-    height: 12px;
-    width: 12px;
+    margin-left: 4px;
+    border-radius: 10%;
+    height: 15px;
+    width: 5px;
     box-shadow: none;
     background-color: var(--accent);
 }
 
-[class*="_progress_"] > [data-test="duration"] {
-    background-color: var(--market-core-fill-black-color);
-    position: absolute;
-    left: calc(50vw + 4px);
-    bottom: 57px;
-    font-size: 10px;
+[class*="_progressBarWrapper_"] {
+    height: 7px;
 }
 
-[class*="_progress_"] > [data-test="current-time"] {
+[class*="_scrubberRow_"] [data-test="duration"] {
+    font-size: 14px !important;
+}
+
+[class*="_scrubberRow_"] [data-test="current-time"] {
     color: var(--accent);
-    background-color: var(--market-core-fill-black-color);
-    position: absolute;
-    left: calc(50vw - 29px);
-    bottom: 57px;
-    font-size: 10px;
+    font-size: 14px !important;
 }
 
-[class*="_playbackControlsContainer_"] button {
-    margin-top: 0px;
+[class*="_playbackControls_"] button {
+    margin-top: 0px !important;
 }
 
-[class*="_playbackControlsContainer_"] {
-    border-radius: var(--market-core-radius-100);
-    margin-top: 10px;
+[class*="_playbackControls_"] {
+    margin-top: 4px !important;
 }
 
 [class*="imageryContainer"] {
@@ -216,17 +234,12 @@ div:has(> [class*="imageryContainer"]) {
     overflow: visible !important;
 }
 
-[class*="_currentMediaItemDetails_"] {
-    margin-left: 80px;
-    max-width: 270px;
+[data-test*="quality-badge"] {
+    border-radius: var(--market-core-radius-none) !important;
+    box-shadow: 0 1px #0000004a, 0 1.29px 5.16px #0000004a !important;
 }
 
-[data-test*="media-state"] {
-    border-radius: var(--market-core-radius-100);
-    border: var(--border);
-}
-
-[aria-label="toggle now playing screen"] {
+[aria-label="Now Playing"] {
     border-radius: var(--market-core-radius-100);
     border: var(--border);
 }
@@ -371,10 +384,6 @@ h2[data-test='artist-name'] {
    NOW PLAYING
    ========================================================= */
 
-[class*="_nowPlayingContainer_"] {
-    background-color: var(--market-core-fill-black-color);
-}
-
 [class*="_bottomGradient_"] {
     display: none;
 }
@@ -413,7 +422,7 @@ button[data-test="request-fullscreen"]:hover {
     background-color: var(--market-core-fill-black-color)
 }
 
-[aria-label="Clear play queue"],[aria-label="Create new playlist"] {
+[data-test="playqueue-clear-source-items"],[aria-label="Create new playlist"] {
     scale: 0.95;
     border: var(--border);
     background-color: var(--market-core-fill-black-color);
@@ -442,7 +451,7 @@ button[data-test="request-fullscreen"]:hover {
     background-color: transparent;
 }
 
-[class*="searchPills"] {
+[class*="_pill_"] {
     margin-top: -65px;
 }
 
